@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+.solid {
+  width: 100%;
+  height: 250px;
+  background-color: mediumslateblue;
+  border-bottom: 15px solid rgb(175, 172, 172);
+  position: absolute;
+  top: -250px;
+  transition: top 1.5s ease-out;
+  text-align: center;
+  font-size: 50px;
+  animation: render 2s ease-out infinite;
+}
+.solid:hover {
+  top: 0;
+}
+
+@keyframes render {
+  0% {
+    background-color: mediumslateblue;
+  }
+  50% {
+    background-color: slategray;
+  }
+  100% {
+    background-color: mediumslateblue;
+  }
+}
+
+.box {
+  width: 250px;
+  height: 250px;
+  background-color: darkblue;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  top: 0;
+  left: 0;
+  animation: renderBox 4s ease-in-out infinite;
+}
+
+@keyframes renderBox {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: darkblue;
+  }
+  25% {
+    top: 0;
+    left: 300px;
+    background-color: rgb(89, 89, 214);
+    border-radius: 25%;
+  }
+  50% {
+    top: 500px;
+    left: 300px;
+    background-color: rgb(37, 150, 62);
+    border-radius: 50%;
+  }
+  75% {
+    top: 500px;
+    left: 0;
+    background-color: rgb(106, 4, 116);
+    border-radius: 75%;
+  }
+}
